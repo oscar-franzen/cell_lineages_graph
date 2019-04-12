@@ -9,3 +9,6 @@ sudo apt-get install graphviz
 dot -Tps lineages.dot -o lineages.dot.ps
 ps2pdf lineages.dot.ps
 ```
+
+### Contaact
+Oscar Franzén <p.oscar.franzen@gmail.com>
