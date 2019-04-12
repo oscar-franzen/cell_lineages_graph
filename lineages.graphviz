@@ -1,0 +1,306 @@
+digraph {
+    node [shape="box" margin=0.05 width=0 height=0];
+    //ratio="compress"
+    //rank="same"
+    rankdir="LR"
+
+    graph[size="7.75,10.25"]
+
+ 	margin=0;
+ 	graph [fontsize=8];
+  	//edge [fontsize=8];
+  	node [fontsize=8];
+
+  	"Fertilized egg" [style="filled,dashed" fillcolor="lightgrey"]
+
+  	"Fertilized egg" -> "Trophoblast"
+  	"Trophoblast" -> "Placental cell"
+
+  	"Fertilized egg" -> "Epiblast"
+
+  	"Epiblast" -> "Embryonic stem cell"
+
+  	"Embryonic stem cell" -> "Primordial germ cell"
+  	"Primordial germ cell" -> "Pre-Sertoli cell"
+  	"Pre-Sertoli cell" -> "Sertoli cell"
+
+  	"Primordial germ cell" -> "Pre-Leydig cell"
+  	"Pre-Leydig cell" -> "Leydig cell"
+
+  	"Primordial germ cell" -> "Theca cell"
+  	"Theca cell" -> "Small Luteal cell"
+
+  	"Primordial germ cell" -> "Pre-Granulosa cell"
+  	"Pre-Granulosa cell" -> "Granulosa cell"
+  	"Granulosa cell" -> "Cumulus cell"
+  	"Granulosa cell" -> "Mature Granulosa cell"
+  	"Granulosa cell" -> "Mural Granulosa cell"
+
+  	"Primordial germ cell" -> "Ovarian Somatic cell"
+  	"Primordial germ cell" -> "Testis Somatic cell"
+
+  	"Embryonic stem cell" -> "Ectoderm"
+  	"Embryonic stem cell" -> "Mesoderm"
+  	"Embryonic stem cell" -> "Endoderm"
+
+  	subgraph {
+  		node[fillcolor="#e6fffa" style="filled,solid"]
+	  	
+	  	"Mesoderm" -> "Hemangioblast" -> "Hematopoietic stem cell"
+	    "Hematopoietic stem cell" -> "Myeloid progenitor"
+	    "Hematopoietic stem cell" -> "Lymphoid progenitor"
+	    "Myeloid progenitor" -> "Myeloblast"
+
+	    "Myeloblast" -> "Basophil"
+	    "Myeloblast" -> "Neutrophil"
+	    "Myeloblast" -> "Eosinophil"
+	    "Myeloblast" -> "Monocyte"
+
+	    "Lymphoid progenitor" -> "NK cell"
+	    "Lymphoid progenitor" -> "Small lymphocyte"
+	    "Small lymphocyte" -> "Naive T cell"
+	
+	 	"Naive T cell" -> "T Helper cell"    
+	    "Naive T cell" -> "T Cytotoxic cell"
+	    "Naive T cell" -> "T Memory cell"
+	    "Naive T cell" -> "T Regulatory cell"
+	    "Naive T cell" -> "NKT cell"
+	    "Naive T cell" -> "Gamma delta T cell"
+	    "Naive T cell" -> "MAIT cell"
+
+	    "Small lymphocyte" -> "Immature B cell"
+	    "Immature B cell" -> "B cell"
+	    "B cell" -> "Memory B cell"
+	    "Memory B cell" -> "Plasma cell"
+
+	    "Monocyte" -> "Fetal macrophage" -> "Mature macrophage" -> "Kupffer cell"
+	    "Fetal macrophage" -> "Red pulp macrophage"
+	    "Monocyte" -> "Microglia cell"
+	    "Monocyte" -> "Conventional dendritic cell\n(syn. Myeloid dendritic cell)"
+
+	    "Conventional dendritic cell\n(syn. Myeloid dendritic cell)" -> "Langerhans cell"
+	    "Conventional dendritic cell\n(syn. Myeloid dendritic cell)" -> "Adipose dendritic cell"
+
+	    "Myeloid progenitor" -> "Megakaryoblast" -> "Megakaryocyte" -> "Platelets"
+	    "Myeloid progenitor" -> "Erythroblast" -> "Reticulocyte" -> "Erythrocyte"
+	    
+	    "Myeloid progenitor" -> "Plasmacytoid dendritic cell"
+
+			"Erythrocyte" -> "Nucleate erythrocyte"
+			"Erythrocyte" -> "Anucleate erythrocyte"
+				
+	    
+	    "Myeloid progenitor" -> "Mast cell"
+
+	    "Mesoderm" -> "Cardiac mesoderm" -> "Cardiomyocyte"
+	    "Cardiac mesoderm" -> "Conduction cell (His bundle, AV nodal)"
+	    "Cardiac mesoderm" -> "Endothelial cell"
+	    "Cardiac mesoderm" -> "Fibroblast"
+	    "Cardiac mesoderm" -> "Vascular smooth muscle cell"
+	}
+
+	"Hemangioblast" -> "Angioblast"
+
+    // Mesenchymal stem cell
+    subgraph {
+	    node[fillcolor="#f5d6eb" style="filled,solid"]
+
+	    "Mesoderm" -> "Mesenchymal stem cell"
+	    "Mesenchymal stem cell" -> "Osteoblast" -> "Osteocyte"
+	    "Mesenchymal stem cell" -> "Pre-osteoclast" -> "Osteoclast"
+	    "Mesenchymal stem cell" -> "Pre-myoblast progenitor cell"
+
+	    "Pre-myoblast progenitor cell" -> "Satellite cell"
+	    "Pre-myoblast progenitor cell" -> "Myoblast"
+
+	    "Myoblast" -> "Skeletal muscle cell"
+	    "Myoblast" -> "Cardiac muscle cell"
+	    "Myoblast" -> "Smooth muscle cell"
+
+	    "Mesenchymal stem cell" -> "Stromal cell"
+	    "Mesenchymal stem cell" -> "Common fibroblast progenitor" -> "Fibroblast"
+	    "Mesenchymal stem cell" -> "Periosteal cell" -> "Chondroprogenitor" -> "Chondrocyte" -> "Hypertrophic chondrocyte"
+
+	    "Periosteal cell" -> "Tendon cell"
+
+	    "Mesenchymal stem cell" -> "White pre-adipocyte" -> "White adipocyte"
+	    "Mesenchymal stem cell" -> "Brown pre-adipocyte" -> "Brown adipocyte"
+
+	    "Mesenchymal stem cell" -> "Vascular progenitor cell"
+
+	    "Vascular progenitor cell" -> "Angioblast" -> "Endothelial cell"
+	    "Endothelial cell" -> "Arterial endothelial cell"
+	    "Endothelial cell" -> "Venous endothelial cell" -> "Lymphatic endothelial cell"
+	    "Vascular progenitor cell" -> "Pericyte"
+
+	    // kidney
+	    "Mesenchymal stem cell" -> "Metanephric progenitor cell"
+
+	    subgraph cluster3 {
+			color=lightgrey;
+			label="Kidney";
+
+		    "Metanephric progenitor cell" -> "Loop of Hendle cell"
+		    "Metanephric progenitor cell" -> "Proximal tubule cell"
+		    "Metanephric progenitor cell" -> "Distal tubule cell"
+		    "Metanephric progenitor cell" -> "Podocyte"
+		    "Metanephric progenitor cell" -> "Juxtaglomerular cell"
+		    "Metanephric progenitor cell" -> "Mesangial cell"
+		    "Metanephric progenitor cell" -> "Vascular smooth muscle cell"
+		    "Metanephric progenitor cell" -> "Macula densa cell" [color=grey]
+		    "Metanephric progenitor cell" -> "Principal cells"
+		    "Metanephric progenitor cell" -> "Intercalated cells"
+		}
+    }
+
+    // Neuronal
+    subgraph {
+    	node[fillcolor="#f2ffe6" style="filled,solid"]
+
+	    "Ectoderm" -> "Neuronal stem cell"
+	    "Neuronal stem cell" -> "Neuronal progenitor cell"
+
+	    "Neuronal progenitor cell" -> "Neuron-restricted progenitor"
+	    "Neuron-restricted progenitor" -> "Purkinje neuron"
+	    "Neuron-restricted progenitor" -> "Dopaminergic neuron"
+	    "Neuron-restricted progenitor" -> "GABAergic neuron"
+	    "Neuron-restricted progenitor" -> "Peptidergic neuron"
+	    "Neuron-restricted progenitor" -> "Noradrenergic neuron"
+	    "Neuron-restricted progenitor" -> "Nitrergic neuron"
+	    "Neuron-restricted progenitor" -> "Mauthner neuron"
+			"Neuron-restricted progenitor" -> "hypocretin-secreting neuron"
+			"Neuron-restricted progenitor" -> "Histaminergic neuron"
+			"Neuron-restricted progenitor" -> "Glycinergic neuron"
+			"Neuron-restricted progenitor" -> "Galanergic neuron"
+	    
+			"GABAergic neuron" -> "Kolmer-Agduhr neuron"
+			"GABAergic neuron" -> "Lugaro cell"
+			"GABAergic neuron" -> "cerebellar Golgi cell"
+			"GABAergic neuron" -> "GABAergic interplexiform cell"
+			"GABAergic neuron" -> "cerebral cortex GABAergic interneuron"
+			
+			"Neuron-restricted progenitor" -> "Sensory neuron"
+			
+			"Sensory neuron" -> "Chemoreceptor cell"
+			"Sensory neuron" -> "vomeronasal sensory neuron"
+			"Sensory neuron" -> "sensory neuron of spinal nerve"
+			"Sensory neuron" -> "sensory neuron of dorsal root ganglion"
+			"Sensory neuron" -> "Rohon-Beard neuron"
+			
+			"Sensory neuron" -> "Photoreceptor cell"
+			
+			"Photoreceptor cell" -> "retinal Rod cell"
+			"Photoreceptor cell" -> "retinal Cone cell"
+			
+			"Sensory neuron" -> "Olfactory bulb interneuron"
+			"Olfactory bulb interneuron" -> "mitral cell"
+
+			"Chemoreceptor cell" -> "Olfactory receptor cell"
+			"Olfactory receptor cell" -> "ciliated olfactory receptor neuron"
+			"Olfactory receptor cell" -> "crypt olfactory receptor neuron"
+			"Olfactory receptor cell" -> "microvillous olfactory receptor neuron"
+			
+			"Chemoreceptor cell" -> "Taste receptor cell"
+			"Taste receptor cell" -> "type I taste bud cell"
+			"Taste receptor cell" -> "type II taste bud cell"
+			"Taste receptor cell" -> "type III taste bud cell"
+			"Taste receptor cell" -> "type IV taste bud cell"
+			"Taste receptor cell" -> "type V taste bud cell"
+
+	    
+	    "Neuron-restricted progenitor" -> "Cholinergic neuron"
+	    "Neuron-restricted progenitor" -> "Glutamatergic neuron"
+	    "Neuron-restricted progenitor" -> "Cajal-Retzius cell"
+	    "Neuron-restricted progenitor" -> "Pyramidal cell"
+	    
+	    "Pyramidal cell" -> "Meynert cell"
+	    
+	    "Neuron-restricted progenitor" -> "Serotonergic neuron"
+	    "Neuronal progenitor cell" -> "Motor neuron progenitor" -> "Motor neuron"
+
+	    "Neuronal stem cell" -> "Glia progenitor cell"
+
+	    "Glia progenitor cell" -> "Type 1 Astrocyte progenitor cell" -> "Type 1 Astrocyte"
+	    "Glia progenitor cell" -> "Type 2 Astrocyte progenitor cell" -> "Type 2 Astrocyte"
+	    "Glia progenitor cell" -> "Oligodendrocyte progenitor cell" -> "Pre-oligodendrocyte" -> "Oligodendrocyte"
+
+	    "Glia progenitor cell" -> "Radial progenitor cell" -> "Radial glia cell"
+
+	    "Radial glia cell" -> "Bergmann glia cell"
+	    "Radial glia cell" -> "Muller glia cell"
+	    "Radial glia cell" -> "Ependymal cell" -> "Tanycytes"
+	    "Radial glia cell" -> "Pituicyte"
+	}
+
+    // Neural crest
+    subgraph {
+    	node[fillcolor="#ccccff" style="filled,solid"]
+
+    	"Ectoderm" -> "Neural crest cell" -> "Schwann cell precursor" -> "Immature Schwann cell"
+
+    	"Immature Schwann cell" -> "Myelinating Schwann cell"
+	    "Immature Schwann cell" -> "Non-myelinating Schwann cell"
+
+	    // Anterior pituitary gland cell
+	    Ectoderm -> "Anterior pituitary gland cell"
+
+	    //
+	    "Neural crest cell" -> "Melanoblast" -> "Melanocyte"
+	    "Neural crest cell" -> "Cardiac neural crest progenitor"
+
+	    "Cardiac neural crest progenitor" -> "Cardiac neuron"
+	    "Cardiac neural crest progenitor" -> "Cardiac smooth muscle cell"
+    }
+
+    // Mammary
+    "Mammary stem cell" -> "Myoepithelial cell"
+    "Mammary stem cell" -> "Luminal epithelial cell"
+
+    // Endoderm
+    subgraph {
+  		node[fillcolor="#ffff99" style="filled,solid"]
+
+  		"Endoderm" -> "Hepatoblast"
+  		"Hepatoblast" -> "Hepatocyte"
+  		"Hepatoblast" -> "Cholangiocyte"
+  		"Hepatoblast" -> "Oval cells"
+
+  		"Endoderm" -> "Pancreatic progenitor"
+
+  		// weirdness. name must start with "cluster" to get a box.
+  		subgraph cluster2 {
+  			color=lightgrey;
+			label="Pancreas";
+
+	  		"Pancreatic progenitor" -> "Endocrine progenitor"
+	  		"Endocrine progenitor" -> "Alpha cell"
+	  		"Endocrine progenitor" -> "Beta cell"
+	  		"Endocrine progenitor" -> "Delta cell"
+	  		"Endocrine progenitor" -> "Epsilon cell"
+	  		"Endocrine progenitor" -> "Pancreatic polypeptide cell"
+
+	  		"Pancreatic progenitor" -> "Exocrine progenitor"
+	  		"Exocrine progenitor" -> "Acinar cell"
+
+	  		"Pancreatic progenitor" -> "Ductal cell"
+	  	}
+
+  		"Endoderm" -> "GI Non-secretory progenitor"
+	  	"Endoderm" -> "GI secretory progenitor"
+
+	  	// weirdness. name must start with "cluster" to get a box.
+  		subgraph cluster1 {
+			color=lightgrey;
+			label="GI tract";
+
+			"GI Non-secretory progenitor" -> "Enterocyte"
+
+	  		"GI secretory progenitor" -> "Paneth cell"
+	  		"GI secretory progenitor" -> "Goblet cell"
+	  		"GI secretory progenitor" -> "Tuft cell"
+	  		"GI secretory progenitor" -> "Enteroendocrine cell"
+	  	}
+  	}
+
+  	"Hepatic stellate cells" -> "Myofibroblasts"
+}
